@@ -45,9 +45,7 @@ public:
 
 private:
     views::FlashView* flash_view_;
-    views::MediaPlayerView* media_player_;
     views::NativeTextButton* play_flash_;
-    views::NativeTextButton* play_wmv_;
     views::NativeTextButton* create_flash_popup_;
 
     DISALLOW_COPY_AND_ASSIGN(DemoActiveX);

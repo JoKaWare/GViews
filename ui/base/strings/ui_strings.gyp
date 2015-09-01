@@ -34,9 +34,9 @@
     },
   ],
   'conditions': [
-    ['os_posix == 1 and OS != "mac"', {
+    [ 'OS != "mac"', {
       'targets': [{
-        'target_name': 'ui_unittest_strings',
+        'target_name': 'ui_locales_strings',
         'type': 'none',
         'dependencies': [
           'ui_strings',
@@ -45,9 +45,9 @@
           'repack_path': '<(DEPTH)/tools/grit/grit/format/repack.py',
           'conditions': [
             ['OS == "ios"', {
-              'pak_output': '<(PRODUCT_DIR)/ui_unittests_strings/en.lproj/locale.pak',
+              'pak_output': '<(PRODUCT_DIR)/locales/cn.lproj/locale.pak',
             }, {
-              'pak_output': '<(PRODUCT_DIR)/ui_unittests_strings/en-US.pak',
+              'pak_output': '<(PRODUCT_DIR)/locales/zh-CN.pak',
             }],
           ],
         },
@@ -56,8 +56,8 @@
             'action_name': 'repack_ui_unittest_strings',
             'variables': {
               'pak_inputs': [
-                '<(grit_base_out_dir)/ui_strings/ui_strings_en-US.pak',
-                '<(grit_base_out_dir)/app_locale_settings/app_locale_settings_en-US.pak',
+                '<(grit_base_out_dir)/ui_strings/ui_strings_zh-CN.pak',
+                '<(grit_base_out_dir)/app_locale_settings/app_locale_settings_zh-CN.pak',
               ],
             },
             'inputs': [
@@ -73,7 +73,7 @@
         ],
         'copies': [
           {
-            'destination': '<(PRODUCT_DIR)/ui_unittests_strings',
+            'destination': '<(PRODUCT_DIR)',
             'files': [
               '<(grit_base_out_dir)/ui_resources/ui_resources_100_percent.pak',
             ],

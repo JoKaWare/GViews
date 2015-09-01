@@ -11,8 +11,8 @@
 #include "demo_main.h"
 
 DemoActiveX::DemoActiveX() : view_created_(false),
-flash_view_(NULL), media_player_(NULL),
-play_flash_(NULL), play_wmv_(NULL),
+flash_view_(NULL), 
+play_flash_(NULL), 
 create_flash_popup_(NULL) {}
 
 DemoActiveX::~DemoActiveX() {}
@@ -30,29 +30,21 @@ void DemoActiveX::InitView(views::View* container)
     views::ColumnSet* column_set = layout->AddColumnSet(0);
     column_set->AddColumn(views::GridLayout::FILL, views::GridLayout::FILL,
         1.0f, views::GridLayout::USE_PREF, 0, 0);
-    column_set->AddColumn(views::GridLayout::FILL, views::GridLayout::FILL,
-        1.0f, views::GridLayout::USE_PREF, 0, 0);
     views::ColumnSet* column_set_1 = layout->AddColumnSet(1);
     column_set_1->AddColumn(views::GridLayout::FILL, views::GridLayout::FILL,
         1.0f, views::GridLayout::USE_PREF, 0, 0);
     column_set_1->AddColumn(views::GridLayout::FILL, views::GridLayout::FILL,
         1.0f, views::GridLayout::USE_PREF, 0, 0);
-    column_set_1->AddColumn(views::GridLayout::FILL, views::GridLayout::FILL,
-        1.0f, views::GridLayout::USE_PREF, 0, 0);
 	layout->StartRow(1.0f, 0);  
-
-	media_player_ = new views::MediaPlayerView();
-	layout->AddView(media_player_); 
+ 
 	flash_view_ = new views::FlashView();
 	layout->AddView(flash_view_);
 
 
-    play_flash_ = new views::NativeTextButton(this, L"播放Flash");
-    play_wmv_ = new views::NativeTextButton(this, L"播放WMV");
+    play_flash_ = new views::NativeTextButton(this, L"播放Flash"); 
     create_flash_popup_ = new views::NativeTextButton(this, L"创建透明Flash窗口");
     layout->StartRow(0.0f, 1);
-    layout->AddView(play_flash_);
-    layout->AddView(play_wmv_);
+    layout->AddView(play_flash_); 
     layout->AddView(create_flash_popup_);
 }
 
@@ -66,13 +58,6 @@ void DemoActiveX::ButtonPressed(views::Button* sender,
 		base::FilePath path_flash = path.Append(L"res/Construction.swf");
         flash_view_->Play(path_flash.value());
     }
-    else if(play_wmv_ == sender)
-    { 
-		base::FilePath path;		
-        PathService::Get(base::DIR_EXE, &path);		
-		base::FilePath path_wmv = path.Append(L"res/FullScreen.wmv");	
-        media_player_->Play( path_wmv.value() );
-    } 
     else if(create_flash_popup_ == sender)
     {
         views::Widget* window = new views::Widget();

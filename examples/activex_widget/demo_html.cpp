@@ -43,7 +43,7 @@ void DemoHtml::InitView(views::View* container)
 
     layout->StartRow(0.0f, 1);
     html_ = new views::Textfield();
-    html_->SetText(L"<hr><p>I'm ÍòĞÇĞÇ</p><input/>");
+    html_->SetText(L"<hr><p>Html Render Testing</p><input/>");
     layout->AddView(html_);
     button_ = new views::NativeTextButton(this, L"äÖÈ¾");
     layout->AddView(button_);

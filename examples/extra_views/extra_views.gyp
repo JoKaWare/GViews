@@ -42,6 +42,7 @@
             'libraries': [
               '-limm32.lib',
               '-loleacc.lib',
+              '-lComctl32.lib',
             ]
           },          
         },],

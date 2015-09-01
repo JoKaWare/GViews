@@ -25,8 +25,8 @@ namespace views
             return false;
         }
 
-        //HRESULT hr = xcp_control_->put_Source(base::win::ScopedBstr(url.c_str()));
-        //return SUCCEEDED(hr);
+        HRESULT hr = xcp_control_->put_Source(base::win::ScopedBstr(url.c_str()));
+        return SUCCEEDED(hr);
         return false;
     }
 

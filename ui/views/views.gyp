@@ -25,7 +25,7 @@
         '../../base/base.gyp:base_i18n',
         '../../base/third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations', 
         '../../skia/skia.gyp:skia', 
-        '../base/strings/ui_strings.gyp:ui_strings', 
+        '../base/strings/ui_strings.gyp:*', 
         '../native_theme/native_theme.gyp:native_theme',
         '../ui.gyp:ui',
         '../ui.gyp:ui_resources',

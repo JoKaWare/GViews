@@ -83,16 +83,13 @@ class ExamplesWindowContents : public WidgetDelegateView, public TabbedPaneListe
 	FillLayout * layout = new FillLayout;
 	SetLayoutManager(layout);
 	
-	AddChildView(status_label_);
+	views::TabbedPane* tabbed_pane = new views::TabbedPane();
+	tabbed_pane->set_listener(this);
 
-	SetStatus( "&sege");
-	//views::TabbedPane* tabbed_pane = new views::TabbedPane();
-	//tabbed_pane->set_listener(this);
+	AddChildView(tabbed_pane);
 
-	//AddChildView(tabbed_pane);
-
-	//tabbed_pane->AddTab( L"table", table_example_->example_view() );
-	//tabbed_pane->AddTab( L"tree", treeviewexample_->example_view() );
+	tabbed_pane->AddTab( L"table", table_example_->example_view() );
+	tabbed_pane->AddTab( L"tree", treeviewexample_->example_view() );
 
   }
 

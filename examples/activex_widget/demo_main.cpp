@@ -100,15 +100,14 @@ void DemoMain::InitWidget()
     layout->StartRow(0, 0);
     layout->AddView(status_label_);
 
-	tabbed_pane->AddTab( L"Label", new DemoLabel );
+	//tabbed_pane->AddTab( L"Label", new DemoLabel );
 		
 	tabbed_pane->AddTab( L"html", new DemoHtml );
 	
 	tabbed_pane->AddTab( L"WebBrowser", new DemoWebBrowser );
 
-	tabbed_pane->AddTab( L"Silverlight", new DemoSilverlight );
-
-	tabbed_pane->AddTab( L"Bubble", new DemoBubble );
+	//tabbed_pane->AddTab( L"Silverlight", new DemoSilverlight );
+ 
 
 	tabbed_pane->AddTab( L"ActiveX", new DemoActiveX );
 

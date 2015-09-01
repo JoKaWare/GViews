@@ -52,7 +52,7 @@ void DemoSilverlight::ButtonPressed(views::Button* sender,
 		base::FilePath path;
 		PathService::Get(base::DIR_EXE, &path);
 		base::FilePath path_flash = path.Append(L"res/SilverlightDemo.xap");
- 
+		silverlight_view1_->Play(path_flash.value());
         silverlight_view2_->Play(path_flash.value());
     }
 }

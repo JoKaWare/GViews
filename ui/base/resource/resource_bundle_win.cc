@@ -50,13 +50,13 @@ void ResourceBundle::LoadCommonResources() {
   switch(ui::GetScaleFactorFromScale(scale)) {
     case ui::SCALE_FACTOR_180P:
       AddDataPackFromPath(GetResourcesPakFilePath(
-          "chrome_touch_180_percent.pak"),
+          "ui_resources__touch_180_percent.pak"),
           SCALE_FACTOR_180P);
       force_touch_resources = true;
       break;
     case ui::SCALE_FACTOR_140P:
       AddDataPackFromPath(GetResourcesPakFilePath(
-          "chrome_touch_140_percent.pak"),
+          "ui_resources__touch_140_percent.pak"),
           SCALE_FACTOR_140P);
       force_touch_resources = true;
   }
@@ -64,11 +64,11 @@ void ResourceBundle::LoadCommonResources() {
   // mode once all resources are available at 140% and 180%.
   if (ui::GetDisplayLayout() == ui::LAYOUT_TOUCH || force_touch_resources) {
     AddDataPackFromPath(
-        GetResourcesPakFilePath("chrome_touch_100_percent.pak"),
+        GetResourcesPakFilePath("ui_resources__touch_100_percent.pak"),
         SCALE_FACTOR_100P);
   } else {
     AddDataPackFromPath(
-        GetResourcesPakFilePath("chrome_100_percent.pak"),
+        GetResourcesPakFilePath("ui_resources_100_percent.pak"),
         SCALE_FACTOR_100P);
   }
 }
