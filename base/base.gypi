@@ -6,11 +6,20 @@
   'target_defaults': {
     'variables': {
       'base_target': 0,
-    },
+    }, 
     'target_conditions': [
       # This part is shared between the targets defined below.
       ['base_target==1', {
         'sources': [
+          'i18n/base_i18n_export.h',  
+          'i18n/case_conversion.cc',
+          'i18n/case_conversion.h', 
+          'i18n/icu_util.cc',
+          'i18n/icu_util.h',
+          'i18n/number_formatting.cc',
+          'i18n/number_formatting.h',
+          'i18n/rtl.cc',
+          'i18n/rtl.h',         
           '../build/build_config.h',
           'third_party/dmg_fp/dmg_fp.h',
           'third_party/dmg_fp/g_fmt.cc',
@@ -414,6 +423,7 @@
         ],
         'defines': [
           'BASE_IMPLEMENTATION',
+          'BASE_I18N_IMPLEMENTATION',
         ],
         'include_dirs': [
           '..',

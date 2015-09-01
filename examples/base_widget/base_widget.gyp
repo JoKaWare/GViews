@@ -24,8 +24,7 @@
       'target_name': 'base_widget',
       'type': 'executable',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n', 
+        '../../base/base.gyp:base', 
         '../../skia/skia.gyp:skia', 
         '../../ui/ui.gyp:ui', 
         '../../ui/ui.gyp:ui_resources', 

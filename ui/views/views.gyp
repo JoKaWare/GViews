@@ -21,12 +21,10 @@
       'target_name': 'views',
       'type': '<(component)',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base', 
         '../../base/third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations', 
         '../../skia/skia.gyp:skia', 
-        '../base/strings/ui_strings.gyp:*', 
-        '../native_theme/native_theme.gyp:native_theme',
+        '../base/strings/ui_strings.gyp:*',  
         '../ui.gyp:ui',
         '../ui.gyp:ui_resources',
       ],
@@ -593,8 +591,7 @@
       'target_name': 'views_unittests',
       'type': 'executable',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base', 
         '../../base/base.gyp:test_support_base',
         # TODO(jcivelli): ideally the resource needed by views would be
         #                 factored out. (for some reason it pulls in a bunch
@@ -782,8 +779,7 @@
       'target_name': 'views_examples_exe',
       'type': 'executable',
       'dependencies': [
-        '../../base/base.gyp:base',  
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base',   
         '../../skia/skia.gyp:skia', 
         '../ui.gyp:ui',
         '../ui.gyp:ui_resources',

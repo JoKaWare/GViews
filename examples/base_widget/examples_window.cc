@@ -21,7 +21,7 @@
 #include "ui/views/widget/widget_delegate.h"
 #include "ui/views/controls/tabbed_pane/tabbed_pane_listener.h"
 #include "tree_table_view_example.h"
-#include "table_example.h"
+#include "native_table_example.h"
 
 namespace views {
 namespace examples {

@@ -240,49 +240,7 @@
         'sync_socket_win.cc', 
       ],
     },
-    {
-      'target_name': 'base_i18n',
-      'type': '<(component)',
-      'variables': {
-        'enable_wexit_time_destructors': 1,
-        'optimize': 'max',
-      },
-      'dependencies': [
-        'base',
-        'third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations', 
-      ],
-      'conditions': [
-        ['toolkit_uses_gtk==1', {
-          'dependencies': [
-            # i18n/rtl.cc uses gtk
-            '../build/linux/system.gyp:gtk',
-          ],
-        }],
-        ['OS == "win"', {
-          # TODO(jschuh): crbug.com/167187 fix size_t to int truncations.
-          'msvs_disabled_warnings': [
-            4267,
-          ],
-        }],
-      ],
-      'export_dependent_settings': [
-        'base',
-      ],
-      'defines': [
-        'BASE_I18N_IMPLEMENTATION',
-      ],
-      'sources': [
-        'i18n/base_i18n_export.h',  
-        'i18n/case_conversion.cc',
-        'i18n/case_conversion.h', 
-        'i18n/icu_util.cc',
-        'i18n/icu_util.h',
-        'i18n/number_formatting.cc',
-        'i18n/number_formatting.h',
-        'i18n/rtl.cc',
-        'i18n/rtl.h', 
-      ],
-    },
+    
     {
       'target_name': 'base_prefs',
       'type': '<(component)',
@@ -561,8 +519,7 @@
         'win/wrapped_window_proc_unittest.cc',
       ],
       'dependencies': [
-        'base',
-        'base_i18n',
+        'base', 
         'base_prefs',
         'base_prefs_test_support',
         'base_static',
@@ -714,8 +671,7 @@
       'type': 'static_library',
       'dependencies': [
         'base',
-        'base_static',
-        'base_i18n',
+        'base_static', 
         '../testing/gmock.gyp:gmock',
         '../testing/gtest.gyp:gtest',
       ],
@@ -888,33 +844,7 @@
               ],
             }],
           ],
-        },
-        {
-          'target_name': 'base_i18n_nacl_win64',
-          'type': '<(component)',
-          # TODO(gregoryd): direct_dependent_settings should be shared with the
-          # 32-bit target, but it doesn't work due to a bug in gyp
-          'direct_dependent_settings': {
-            'include_dirs': [
-              '..',
-            ],
-          },
-          'defines': [
-            '<@(nacl_win64_defines)',
-            'BASE_I18N_IMPLEMENTATION',
-          ],
-          'include_dirs': [
-            '..',
-          ],
-          'sources': [
-            'i18n/icu_util_nacl_win64.cc',
-          ],
-          'configurations': {
-            'Common_Base': {
-              'msvs_target_platform': 'x64',
-            },
-          },
-        },
+        }, 
         {
           # TODO(rvargas): Remove this when gyp finally supports a clean model.
           # See bug 36232.

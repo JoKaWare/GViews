@@ -11,8 +11,7 @@
       'target_name': 'aura',
       'type': '<(component)',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base', 
         '../../base/third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations',
         '../../skia/skia.gyp:skia', 
         '../ui.gyp:ui',
@@ -195,8 +194,7 @@
       'target_name': 'aura_demo',
       'type': 'executable',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base', 
         '../../skia/skia.gyp:skia',
         '../../third_party/icu/icu.gyp:icui18n',
         '../../third_party/icu/icu.gyp:icuuc', 
@@ -217,8 +215,7 @@
       'target_name': 'aura_bench',
       'type': 'executable',
       'dependencies': [
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',
+        '../../base/base.gyp:base', 
         '../../skia/skia.gyp:skia',
         '../../third_party/icu/icu.gyp:icui18n',
         '../../third_party/icu/icu.gyp:icuuc', 

@@ -15,8 +15,7 @@
       'target_name': 'ui',
       'type': '<(component)',
       'dependencies': [
-        '../base/base.gyp:base',
-        '../base/base.gyp:base_i18n',
+        '../base/base.gyp:base', 
         '../base/base.gyp:base_static',
         '../base/third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations',  
         '../skia/skia.gyp:skia', 
@@ -27,6 +26,7 @@
       ],
       'defines': [
         'UI_IMPLEMENTATION',
+        'NATIVE_THEME_IMPLEMENTATION',
       ],
       # Export these dependencies since text_elider.h includes ICU headers.
      
@@ -373,7 +373,17 @@
         'gfx/vector2d_f.cc',
         'gfx/vector2d_f.h',
         'gfx/vector3d_f.cc',
-        'gfx/vector3d_f.h', 
+        'gfx/vector3d_f.h',         
+        'native_theme/common_theme.cc',
+        'native_theme/common_theme.h',
+        'native_theme/native_theme.cc',
+        'native_theme/native_theme.h', 
+        'native_theme/native_theme_aura.cc',
+        'native_theme/native_theme_aura.h',
+        'native_theme/native_theme_base.cc',
+        'native_theme/native_theme_base.h',  
+        'native_theme/native_theme_win.cc',
+        'native_theme/native_theme_win.h',
       ],
       'target_conditions': [
         ['OS == "ios"', {

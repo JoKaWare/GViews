@@ -9,8 +9,7 @@
       'target_name': 'extra_views',
       'type': '<(component)',
       'dependencies': [       
-        '../../base/base.gyp:base',
-        '../../base/base.gyp:base_i18n',     
+        '../../base/base.gyp:base',    
         '../../ui/views/views.gyp:views',		
         '../../skia/skia.gyp:skia',          
         '../../ui/ui.gyp:ui', 

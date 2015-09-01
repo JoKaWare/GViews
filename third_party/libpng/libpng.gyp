@@ -52,22 +52,16 @@
       'conditions': [
         ['OS!="win"', {'product_name': 'png'}],
         ['OS=="win"', {
-          'type': '<(component)',
+          'type': 'static_library',
         }, {
           # Chromium libpng does not support building as a shared_library
           # on non-Windows platforms.
           'type': 'static_library',
         }],
         ['OS=="win" and component=="shared_library"', {
-          'defines': [
-            'PNG_BUILD_DLL',
+          'defines': [ 
             'PNG_NO_MODULEDEF',
-          ],
-          'direct_dependent_settings': {
-            'defines': [
-              'PNG_USE_DLL',
-            ],
-          },          
+          ],         
         }],
         ['OS=="android"', {
           'toolsets': ['target', 'host'],
