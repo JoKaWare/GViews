@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "table_example.h"
+#include "native_table_example.h"
 
 #include <vector>
 
@@ -29,16 +29,16 @@ ui::TableColumn TestTableColumn(int id, const std::string& title) {
 
 }  // namespace
 
-TableExample::TableExample() : ExampleBase("Table") , table_(NULL) {
+NativeTableExample::NativeTableExample() : ExampleBase("Table") , table_(NULL) {
 }
 
-TableExample::~TableExample() {
+NativeTableExample::~NativeTableExample() {
   // Delete the view before the model.
   delete table_;
   table_ = NULL;
 }
 
-void TableExample::CreateExampleView(View* container) {
+void NativeTableExample::CreateExampleView(View* container) {
   column1_visible_checkbox_ = new Checkbox(
       ASCIIToUTF16("Fruit column visible"));
   column1_visible_checkbox_->SetChecked(true);
@@ -103,11 +103,11 @@ void TableExample::CreateExampleView(View* container) {
   layout->AddView(column4_visible_checkbox_);
 }
 
-int TableExample::RowCount() {
+int NativeTableExample::RowCount() {
   return 10;
 }
 
-string16 TableExample::GetText(int row, int column_id) {
+string16 NativeTableExample::GetText(int row, int column_id) {
   if (row == -1)
     return string16();
 
@@ -121,14 +121,14 @@ string16 TableExample::GetText(int row, int column_id) {
   return ASCIIToUTF16(cells[row % 5][column_id]);
 }
 
-gfx::ImageSkia TableExample::GetIcon(int row) {
+gfx::ImageSkia NativeTableExample::GetIcon(int row) {
   SkBitmap row_icon = row % 2 ? icon1_ : icon2_;
   return gfx::ImageSkia::CreateFrom1xBitmap(row_icon);
 }
 
-void TableExample::SetObserver(ui::TableModelObserver* observer) {}
+void NativeTableExample::SetObserver(ui::TableModelObserver* observer) {}
 
-void TableExample::GetGroupRange(int model_index, GroupRange* range) {
+void NativeTableExample::GetGroupRange(int model_index, GroupRange* range) {
   if (model_index < 2) {
     range->start = 0;
     range->length = 2;
@@ -141,21 +141,21 @@ void TableExample::GetGroupRange(int model_index, GroupRange* range) {
   }
 }
 
-void TableExample::OnSelectionChanged() {
+void NativeTableExample::OnSelectionChanged() {
   PrintStatus("Selected: %s",
               UTF16ToASCII( GetText(table_->FirstSelectedRow(),0)).c_str());
 }
 
-void TableExample::OnDoubleClick() {
+void NativeTableExample::OnDoubleClick() {
   PrintStatus("Double Click: %s",
               UTF16ToASCII(GetText(table_->FirstSelectedRow(),0)).c_str());
 }
 
-void TableExample::OnMiddleClick() {}
+void NativeTableExample::OnMiddleClick() {}
 
-void TableExample::OnKeyDown(ui::KeyboardCode virtual_keycode) {}
+void NativeTableExample::OnKeyDown(ui::KeyboardCode virtual_keycode) {}
 
-void TableExample::ButtonPressed(Button* sender, const ui::Event& event) {
+void NativeTableExample::ButtonPressed(Button* sender, const ui::Event& event) {
   int index = 0;
   bool show = true;
   if (sender == column1_visible_checkbox_) {

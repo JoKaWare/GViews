@@ -27,14 +27,14 @@ class TableView;
 
 namespace examples {
 
-class TableExample : public ExampleBase,
+class NativeTableExample : public ExampleBase,
                      public ui::TableModel,
                      public TableGrouper,
                      public TableViewObserver,
                      public ButtonListener {
  public:
-  TableExample();
-  virtual ~TableExample();
+  NativeTableExample();
+  virtual ~NativeTableExample();
 
   // ExampleBase:
   virtual void CreateExampleView(View* container) OVERRIDE;
@@ -69,7 +69,7 @@ class TableExample : public ExampleBase,
   SkBitmap icon1_;
   SkBitmap icon2_;
 
-  DISALLOW_COPY_AND_ASSIGN(TableExample);
+  DISALLOW_COPY_AND_ASSIGN(NativeTableExample);
 };
 
 }  // namespace examples

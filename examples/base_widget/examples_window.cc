@@ -36,7 +36,7 @@ class ExamplesWindowContents : public WidgetDelegateView, public TabbedPaneListe
         operation_(operation) {
     instance_ = this;
 	treeviewexample_ = new TreeTableViewExample;
-	table_example_ = new TableExample;
+	table_example_ = new NativeTableExample;
   }
   virtual ~ExamplesWindowContents() {
 	  delete treeviewexample_;
@@ -99,7 +99,7 @@ class ExamplesWindowContents : public WidgetDelegateView, public TabbedPaneListe
   Label* status_label_;
   const Operation operation_;
   TreeTableViewExample *treeviewexample_; 
-  TableExample * table_example_;
+  NativeTableExample * table_example_;
   DISALLOW_COPY_AND_ASSIGN(ExamplesWindowContents);
 };
 
