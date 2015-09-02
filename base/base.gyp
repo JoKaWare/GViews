@@ -22,8 +22,7 @@
       },
       'dependencies': [
         'base_static', 
-        '../testing/gtest.gyp:gtest_prod',
-        '../third_party/modp_b64/modp_b64.gyp:modp_b64',
+        '../testing/gtest.gyp:gtest_prod', 
         'third_party/dynamic_annotations/dynamic_annotations.gyp:dynamic_annotations',
       ],
       # TODO(gregoryd): direct_dependent_settings should be shared with the

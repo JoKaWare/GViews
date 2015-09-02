@@ -37,6 +37,14 @@
              '<(SHARED_INTERMEDIATE_DIR)/ui/ui_resources/gfx_resources.pak',
           ],
         },
+      ],      
+      'copies': [
+        {
+          'destination': '<(PRODUCT_DIR)',
+          'files': [
+            '<(SHARED_INTERMEDIATE_DIR)/ui/ui_resources/ui_resources_100_percent.pak',
+          ],
+        },
       ],
       'includes': [ '../build/grit_target.gypi' ],
     },

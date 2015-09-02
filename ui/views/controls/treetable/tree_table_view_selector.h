@@ -7,8 +7,8 @@
 
 #include "base/string16.h"
 #include "base/time.h"
-#include "ui/base/ime/text_input_client.h" 
-#include "../extra_views_export.h"
+#include "ui/base/ime/text_input_client.h"  
+#include "ui/views/views_export.h"
 
 namespace views {
 
@@ -16,7 +16,7 @@ class TreeTableView;
 
 // TreeTableViewSelector is used to change the selection in the tree as the user
 // types characters.
-class EXTRA_EXPORT TreeTableViewSelector : public ui::TextInputClient {
+class VIEWS_EXPORT TreeTableViewSelector : public ui::TextInputClient {
  public:
   explicit TreeTableViewSelector(TreeTableView* tree);
   virtual ~TreeTableViewSelector();

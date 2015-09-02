@@ -8,7 +8,7 @@
 #include "ui/views/controls/button/label_button.h"
 #include "ui/views/controls/menu/menu_model_adapter.h"
 #include "ui/views/controls/menu/menu_runner.h"
-#include "examples/extra_views/treetable/tree_table_view.h"
+#include "ui/views/controls/treetable/tree_table_view.h"
 #include "ui/views/layout/grid_layout.h"
 
 namespace views {

@@ -217,6 +217,8 @@
         'controls/table/table_view.h',
         'controls/table/table_view_observer.h',
         'controls/table/table_view_row_background_painter.h',
+        'controls/table/table_view_win.cc',
+        'controls/table/table_view_win.h',
         'controls/textfield/native_textfield_views.cc',
         'controls/textfield/native_textfield_views.h',
         'controls/textfield/native_textfield_win.cc',
@@ -235,7 +237,19 @@
         'controls/tree/tree_view_controller.cc',
         'controls/tree/tree_view_controller.h',
         'controls/tree/tree_view_selector.cc',
-        'controls/tree/tree_view_selector.h', 
+        'controls/tree/tree_view_selector.h',         
+        'controls/treetable/tree_table_header.cc',        
+        'controls/treetable/tree_table_header.h',
+        'controls/treetable/tree_table_model.cc',
+        'controls/treetable/tree_table_model.h',
+        'controls/treetable/tree_table_node_iterator.h',
+        'controls/treetable/tree_table_node_model.h',
+        'controls/treetable/tree_table_view.cc',        
+        'controls/treetable/tree_table_view.h',
+        'controls/treetable/tree_table_view_controller.cc',        
+        'controls/treetable/tree_table_view_controller.h',                
+        'controls/treetable/tree_table_view_selector.cc',
+        'controls/treetable/tree_table_view_selector.h',
         'debug_utils.cc',
         'debug_utils.h',
         'drag_controller.h',
@@ -698,7 +712,7 @@
     },  # target_name: views_unittests
     {
       'target_name': 'views_examples_lib',
-      'type': '<(component)',
+      'type': 'static_library',
       'dependencies': [
         '../../base/base.gyp:base', 
         '../../skia/skia.gyp:skia', 
@@ -708,9 +722,6 @@
       ],
       'include_dirs': [
         '..',
-      ],
-      'defines': [
-        'VIEWS_EXAMPLES_IMPLEMENTATION',
       ],
       'sources': [
         'examples/bubble_example.cc',

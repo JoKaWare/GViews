@@ -14,7 +14,7 @@
 #include "ui/views/controls/button/button.h"
 #include "ui/views/controls/table/table_grouper.h" 
 #include "ui/views/controls/table/table_view_observer.h"
-#include "examples/extra_views/table/table_view_win.h"
+#include "ui/views/controls/table/table_view_win.h"
 #include "example_base.h"
 
 namespace gfx {

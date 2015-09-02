@@ -30,13 +30,13 @@ class TreeTableHeader;
 // Note on implementation. This implementation doesn't scale well. In particular
 // it does not store any row information, but instead calculates it as
 // necessary. But it's more than adequate for current uses.
-class EXTRA_EXPORT TreeTableView : public View,
+class VIEWS_EXPORT TreeTableView : public View,
                               public ui::TreeTableModelObserver,
                               public TextfieldController,
                               public FocusChangeListener {
  public:
 	 static std::string kViewClassName;
-	 struct EXTRA_EXPORT VisibleColumn {
+	 struct VIEWS_EXPORT VisibleColumn {
 		 VisibleColumn();
 		 ~VisibleColumn();
 

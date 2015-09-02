@@ -8,7 +8,7 @@
 #include "ui/gfx/font.h"
 #include "ui/views/view.h" 
 #include "tree_table_model.h"
-#include "../extra_views_export.h"
+#include "ui/views/views_export.h"
 
 
 namespace views {
@@ -17,7 +17,7 @@ class TreeTableView;
 
 int TreeTableColumnAlignmentToCanvasAlignment(ui::TreeTableColumn::Alignment alignment);
 // Views used to render the header for the table.
-class EXTRA_EXPORT TreeTableHeader : public views::View {
+class VIEWS_EXPORT TreeTableHeader : public views::View {
  public:
   // Amount the text is padded on the left/right side.
   static const int kHorizontalPadding;

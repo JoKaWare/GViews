@@ -14,12 +14,10 @@
 #include "build/build_config.h"
 #include "third_party/skia/include/core/SkColor.h"
 #include "ui/views/controls/native_control.h"
-#include "ui/base/models/table_model_observer.h"
-#include "../extra_views_export.h"
+#include "ui/base/models/table_model_observer.h" 
+
 #if defined(OS_WIN)
 #include <windows.h>
-
-
 typedef struct tagNMLVCUSTOMDRAW NMLVCUSTOMDRAW;
 #endif  // defined(OS_WIN)
 
@@ -72,7 +70,7 @@ enum TableTypes {
 };
 
 // Returned from SelectionBegin/SelectionEnd
-class EXTRA_EXPORT TableSelectionIterator {
+class VIEWS_EXPORT TableSelectionIterator {
  public:
   TableSelectionIterator(TableViewWin* view, int view_index);
   TableSelectionIterator& operator=(const TableSelectionIterator& other);
@@ -94,7 +92,7 @@ class EXTRA_EXPORT TableSelectionIterator {
 
 #if defined(OS_WIN)
 // TODO(port): Port TableView.
-class EXTRA_EXPORT TableViewWin : public NativeControl,
+class VIEWS_EXPORT TableViewWin : public NativeControl,
                                public ui::TableModelObserver {
  public:
   typedef TableSelectionIterator iterator;

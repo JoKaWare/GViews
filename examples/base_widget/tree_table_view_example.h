@@ -10,8 +10,8 @@
 #include "ui/base/models/simple_menu_model.h"
 #include "ui/views/context_menu_controller.h"
 #include "ui/views/controls/button/button.h"
-#include "examples/extra_views/treetable/tree_table_node_model.h"
-#include "examples/extra_views/treetable/tree_table_view_controller.h"
+#include "ui/views/controls/treetable/tree_table_node_model.h"
+#include "ui/views/controls/treetable/tree_table_view_controller.h"
 #include "example_base.h"
 
 namespace views {

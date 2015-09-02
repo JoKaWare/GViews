@@ -7,8 +7,8 @@
 
 #include <vector>
 
-#include "base/string16.h"
-#include "../extra_views_export.h"
+#include "base/string16.h" 
+#include "ui/views/views_export.h"
 
 namespace gfx {
 class ImageSkia;
@@ -21,7 +21,7 @@ class TreeTableModel;
 // TreeTableModelNode --------------------------------------------------------------
 
 // Type of class returned from the model.
-class EXTRA_EXPORT TreeTableModelNode {
+class VIEWS_EXPORT TreeTableModelNode {
  public:
   // Returns the title for the node.
   virtual const base::string16& GetText(int column_index) const = 0;
@@ -31,7 +31,7 @@ class EXTRA_EXPORT TreeTableModelNode {
 };
 
 // Observer for the // TreeTableModel ------------------------------------------------------------------. Notified of significant events to the model.
-class EXTRA_EXPORT TreeTableModelObserver {
+class VIEWS_EXPORT TreeTableModelObserver {
  public:
   // Notification that nodes were added to the specified parent.
   virtual void TreeTableNodesAdded(TreeTableModel* model,
@@ -55,7 +55,7 @@ class EXTRA_EXPORT TreeTableModelObserver {
 // TreeTableModel ------------------------------------------------------------------
 
 // The model for TreeTableView.
-class EXTRA_EXPORT TreeTableModel {
+class VIEWS_EXPORT TreeTableModel {
  public:
   // Returns the root of the tree. This may or may not be shown in the tree,
   // see SetRootShown for details.
@@ -98,7 +98,7 @@ class EXTRA_EXPORT TreeTableModel {
 	virtual ~TreeTableModel() {}
 };
 
-struct EXTRA_EXPORT TreeTableColumn {
+struct VIEWS_EXPORT TreeTableColumn {
 	enum Alignment {
 		LEFT, RIGHT, CENTER
 	};

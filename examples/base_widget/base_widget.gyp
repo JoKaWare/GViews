@@ -28,8 +28,7 @@
         '../../skia/skia.gyp:skia', 
         '../../ui/ui.gyp:ui', 
         '../../ui/ui.gyp:ui_resources', 
-        '../../ui/views/views.gyp:views',
-        '../extra_views/extra_views.gyp:*',
+        '../../ui/views/views.gyp:views', 
       ],
       'include_dirs': [
         '../..',

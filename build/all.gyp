@@ -20,8 +20,7 @@
         ['OS!="ios"', {
           'dependencies': [           
             '../skia/skia.gyp:*',   
-            '../third_party/libpng/libpng.gyp:*', 
-            '../third_party/modp_b64/modp_b64.gyp:*',   
+            '../third_party/libpng/libpng.gyp:*',    
             '<(libjpeg_gyp_path):*',
           ],
         }],

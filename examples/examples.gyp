@@ -8,8 +8,7 @@
       'type': 'none',
       'dependencies': [
         'base_widget/base_widget.gyp:*',
-        'activex_widget/activex_widget.gyp:*',  
-        'extra_views/extra_views.gyp:*',
+        'activex_widget/activex_widget.gyp:*',   
       ],
     },
   ],
